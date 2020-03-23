@@ -24,13 +24,23 @@ public class Nodo {
     private Nodo siguiente;
     private Nodo anterior;
     
-    public Nodo(){}
+    public Nodo(){
+        this.peso=0;
+    }
 
     
     public Nodo(String nombre){
         this.raiz=false;
         this.nombre=nombre;
         this.peso=0;
+        this.nHijos=0;
+        hijos=new ArrayList<Nodo>();
+
+    }
+    public Nodo(String nombre, Integer peso){
+        this.raiz=false;
+        this.nombre=nombre;
+        this.peso=peso;
         this.nHijos=0;
         hijos=new ArrayList<Nodo>();
 
@@ -53,12 +63,22 @@ public class Nodo {
         }    
     
     }
+    
+    public void agregarHijo(Nodo nodo){
+        hijos.add(nodo);    
+    
+    }
+    
     public int getCantHIjos(){
         return hijos.size();
     }
     
     public List<Nodo> getHijos(){
         return hijos;
+    }
+    
+    public void setHijos(List<Nodo> hijos){
+        this.hijos=hijos;
     }
     
     public Nodo getSiguiente(){
@@ -75,5 +95,11 @@ public class Nodo {
     }    
     public  String getNombre(){
         return nombre;
+    }
+    public int getPeso(){
+        return peso;
+    }
+    public void setPeso(int peso){
+        this.peso=peso;
     }
 }
