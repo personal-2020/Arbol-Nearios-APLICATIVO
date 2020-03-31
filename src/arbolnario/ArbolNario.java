@@ -58,7 +58,17 @@ public class ArbolNario {
 
         ar.mostrarhijos();        
         
-        System.out.println("PESO DE LA RAMA 1 : +"+ar.suma(h1));                       
+        System.out.println("PESO DE LA RAMA 1 : +"+ar.suma(h1));
+        
+        //Eliminar el hijo de menor peso
+        //Se eliminara h11 y sus hijos pasaran a ser hijos directos de 1 y 100 sera el hijo del menor peso de sus hijos
+        ar.eliminarHijoNuevoPadre(h11, h1, ar.getHijos());
+        
+        
+        
+        
+        
+        
 
     }
 
