@@ -38,11 +38,15 @@ public class ArbolNario {
         ar.agregarHijo(h8);
         ar.agregarHijo(h9);
         ar.agregarHijo(h10);
-
+        //Creacion otros nodos
+        Nodo h11=new Nodo("100",20);
+        Nodo h12= new Nodo("17",2);
+        
         ar.agregarHijo2(new Nodo("100",20),h1);
-        ar.agregarHijo2(new Nodo("17",2),new Nodo("100",20));
-        ar.agregarHijo2(new Nodo("99",1),new Nodo("17",2));
-        ar.agregarHijo2(new Nodo("67",10),new Nodo("17",2));
+        ar.agregarHijo2(new Nodo("174",1),h11);
+        ar.agregarHijo2(h12,h11);
+        ar.agregarHijo2(new Nodo("99",1),h12);
+        ar.agregarHijo2(new Nodo("67",10),h12);
         ar.agregarHijo2(new Nodo("50",80),h1);
         ar.agregarHijo2(new Nodo("90",10),h10);
         ar.agregarHijo2(new Nodo("200",30),h10);

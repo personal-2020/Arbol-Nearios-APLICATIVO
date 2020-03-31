@@ -88,39 +88,31 @@ public class Arbol {
         //for(Nodo g:hijoss){
         for(int i =0;i<hijoss.size();i++){
             Nodo g=hijoss.get(i);
-            System.out.println("que nombre es: "+g.getNombre());
+            //System.out.println("que nombre es: "+g.getNombre());
             if(g.getNombre().equals(padre.getNombre())){
                 paso=true;                     
                 index=i;
+                padre.agregarHijo(nodo);
+                hijoss.set(index,padre);
             }                                
-        }
-                      
-        
+        }                             
         if(paso){
-            padre.gregarHijo(nodo);
+            //padre.gregarHijo(nodo);
             //padre.agregarHijo(nodo);
             //List<Nodo>f=padre.getHijos();
             //f.add(nodo);
-            //padre.setHijos(f);
-            
-            hijoss.set(index,padre);
+            //padre.setHijos(f);            
+            //hijoss.set(index,padre);
             sepudo=true;               
-        }else{
-            
+        }else{            
             for(Nodo f: hijoss){
                 if(f.getCantHIjos()>0){
                     pruebaPadre(nodo,padre,f.getHijos());                
                 }                                   
-            }
-            
+            }            
         }
-
     }
-    
-    
-    
-    
-    
+   
     public void eliminarNodo(Nodo nodo, Nodo padre) {
         
         
